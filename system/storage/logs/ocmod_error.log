@@ -1,0 +1,12 @@
+2018-10-22 22:13:35 - 
+
+MOD: Simple Blog
+NOT FOUND!
+CODE: $categories = $this->model_catalog_category->getCategories(0);
+FILE: catalog/controller/common/header.php
+
+
+MOD: So Product Feature
+NOT FOUND!
+CODE: 'tag' => $result['tag']
+FILE: admin/model/catalog/product.php
