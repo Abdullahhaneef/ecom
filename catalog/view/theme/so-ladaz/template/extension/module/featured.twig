@@ -72,14 +72,6 @@
                             {% set class_cart_info = 'cartinfo--left' %}
                         {% endif %}
 
-                        <div class="button-group {{class_cart_info}}">
-                            <button class="addToCart btn-button" type="button" title="{{ button_cart}}" onclick="cart.add('{{ product.product_id }}', '{{ product.minimum }}');"><i class="fa fa-shopping-basket"></i><span>{{ button_cart }}</span></button>
-                            <button class="wishlist btn-button" type="button" title="{{ button_wishlist}}" onclick="wishlist.add('{{ product.product_id }}');"><i class="fa fa-heart-o"></i><span>{{ button_wishlist }}</span></button>
-                            <button class="compare btn-button" type="button" title="{{ button_compare }}" onclick="compare.add('{{ product.product_id }}');"><i class="fa fa-refresh"></i><span>{{ button_compare }}</span></button>
-                            {% if soconfig.get_settings('quick_status') %}
-                                <a class="quickview iframe-link visible-lg btn-button" title="{{ objlang.get('text_quickview')}}" data-fancybox-type="iframe"  href="{{ our_url.link('extension/soconfig/quickview','product_id='~product.product_id) }}"> <i class="fa fa-eye"></i><span>{{ objlang.get('text_quickview')}}</span> </a>
-                            {% endif %} 
-                        </div>
 
                     </div>
                      
@@ -110,6 +102,12 @@
                                     <span class="price-new">{{ product.special }} </span> <span class="price-old">{{ product.price }} </span>
                                 {% endif %} 
                             </div>
+                            <button class="addToCart btn-button" type="button" title="{{ button_cart}}" onclick="cart.add('{{ product.product_id }}', '{{ product.minimum }}');"><i class="fa fa-shopping-basket"></i><span>{{ button_cart }}</span></button>
+                            {% if soconfig.get_settings('quick_status') %}
+                                <a class="quickview iframe-link visible-lg btn-button" title="{{ objlang.get('text_quickview')}}" data-fancybox-type="iframe"  href="{{ our_url.link('extension/soconfig/quickview','product_id='~product.product_id) }}"> <i class="fa fa-eye"></i></a>
+                            {% endif %}
+
+
                             {% endif %} 
                            
                     </div>
