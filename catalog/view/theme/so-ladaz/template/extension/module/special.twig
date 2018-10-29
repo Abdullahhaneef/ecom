@@ -103,7 +103,7 @@
                                 {% endif %} 
                             </div>
 
-                            <button class="addToCart btn-button" type="button" title="{{ button_cart}}" onclick="cart.add('{{ product.product_id }}', '{{ product.minimum }}');"><i class="fa fa-shopping-basket"></i><span>{{ button_cart }}</span></button>
+                            <button class="addToCart btn-button" type="button" title="{{ button_cart}}" onclick="cart.add('{{ product.product_id }}', '1');"><i class="fa fa-shopping-basket"></i><span>{{ button_cart }}</span></button>
                             {% if soconfig.get_settings('quick_status') %}
                                 <a class="quickview iframe-link visible-lg btn-button" title="{{ objlang.get('text_quickview')}}" data-fancybox-type="iframe"  href="{{ our_url.link('extension/soconfig/quickview','product_id='~product.product_id) }}"> <i class="fa fa-eye"></i> </a>
                             {% endif %}
