@@ -13,14 +13,14 @@
             <div class="dropdown-inner"> {% for children in category.children|batch(category.children|length / category.column|round(1, 'ceil')) %}
               <ul class="list-unstyled">
                 {% for child in children %}
-                <li><a href="{{ child.href }}">{{ child.name }}</a></li>
+                <li><a href="{{ child.href }}+&limit=100">{{ child.name }}</a></li>
                 {% endfor %}
               </ul>
               {% endfor %}</div>
-            <a href="{{ category.href }}" class="see-all">{{ text_all }} {{ category.name }}</a> </div>
+            <a href="{{ category.href }}+&limit=100" class="see-all">{{ text_all }} {{ category.name }}</a> </div>
         </li>
         {% else %}
-        <li><a href="{{ category.href }}">{{ category.name }}</a></li>
+        <li><a href="{{ category.href }}+&limit=100">{{ category.name }}</a></li>
         {% endif %}
         {% endfor %}
       </ul>

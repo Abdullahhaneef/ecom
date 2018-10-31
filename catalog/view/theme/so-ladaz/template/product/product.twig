@@ -100,22 +100,6 @@
 					<h1>{{heading_title}}</h1>
 				</div>
 				
-				{% if review_status %}
-				{#======== Review - Rating ========== #}
-				<div class="box-review">
-					<div class="rating">
-						<div class="rating-box">
-						{% for i in 1..5 %}
-							{% if rating < i %}<span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>{% else %}<span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>{% endif %}
-						{% endfor %}
-						</div>
-					</div>
-					<a class="reviews_button" href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;">{{ reviews }}</a>
-					{% if soconfig.get_settings('product_order') %}
-								<span class="order-num">{{orders}}</span>
-					{% endif %}
-				{% endif %}
-				</div>
 
 				{% if price %}
 				{#========= Product - Price ========= #}
@@ -134,9 +118,6 @@
 					</span>
 					{% endif %} 
 
-					{% if tax %}
-						<div class="price-tax"><span>{{ text_tax }}</span> <span id="price-tax"> {{ tax }} </span></div>
-					{% endif %}
 				 
 				</div>
 				{% endif %}
@@ -157,9 +138,6 @@
 							<div class="brand"><span>{{ text_manufacturer }} </span><a href="{{ manufacturers }}">{{ manufacturer }}</a></div>
 						{% endif %}
 						
-						{% if model %}
-						<div class="model"><span>{{ text_model }} </span> {{ model }}</div>
-						{% endif %}
 						
 						{% if reward %}
 							<div class="reward"><span>{{ text_reward }}</span> {{ reward }}</div>
@@ -183,12 +161,6 @@
 
 				</div>
 				
-				{% if description_short %}
-				<div class="short_description form-group">
-					<h3>{{objlang.get('text_overview')}}</h3>
-	                {{ description_short }}       
-				</div>
-				{% endif %}
 
 				{#===== Show CountDown Product =======#}
 				{% if soconfig.get_settings('countdown_status') and special_end_date %}
@@ -376,6 +348,7 @@
 						<div class="form-group box-info-product">
 							<div class="option quantity">
 								<div class="input-group quantity-control">
+									  <span style="width: 132px;">Quantity : </span>
 									  <span class="input-group-addon product_quantity_down fa fa-minus"></span>
 									  <input class="form-control" type="text" name="quantity" value="{{ minimum }}" />
 									  <input type="hidden" name="product_id" value="{{ product_id }}" />								  
@@ -387,19 +360,9 @@
 								<div class="cart">
 									<input type="button"  value="{{ button_cart }}" data-loading-text="{{ text_loading }}" id="button-cart" class="btn btn-mega btn-lg " />
 								</div>
-								<div class="add-to-links wish_comp">
-									<ul class="blank">
-										<li class="wishlist">
-											<a onclick="wishlist.add({{ product_id }});"><i class="fa fa-heart"></i></a>
-										</li>
-										<li class="compare">
-											<a onclick="compare.add({{ product_id }});"><i class="fa fa-retweet"></i></a>
-										</li>
-										
-									</ul>
-								</div>
 							</div>
 						</div>
+
 
 						<div class="clearfix"></div>
 						{% if minimum > 1 %}
@@ -407,28 +370,9 @@
 						{% endif %}
 					</div>
 
-					{% if soconfig.get_settings('product_page_button') and soconfig.get_settings('product_socialshare') %}
-					<div class="form-group social-share clearfix">
-						{{ soconfig.decode_entities( soconfig.get_settings('product_socialshare') ) }}
-					</div>
-					{% endif %}
 					<!-- Go to www.addthis.com/dashboard to customize your tools -->
 					<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-529be2200cc72db5"></script>
 					
-					 {% if tags %}
-					<div id="tab-tags">
-						{{ text_tags }}
-						{% for i in 0..tags|length %}
-						{% if i < (tags|length - 1) %} <a class="btn btn-primary btn-sm" href="{{ tags[i].href }}">{{ tags[i].tag }}</a>
-						{% else %} 
-						{% if tags[i] is not empty  %}
-						<a class="btn btn-primary btn-sm 22" href="{{ tags[i].href }}">{{ tags[i].tag }}</a> {% endif %}
-						{% endif %}
-						{% endfor %} 
-						
-					 
-					</div>
-					{% endif %}
 
 				</div>
 					
@@ -483,9 +427,6 @@
 					           	 <li><a href="#tab-review" data-toggle="tab">{{ tab_review }}</a></li>
 					            {% endif %}
 								
-								{% if soconfig.get_settings('product_enableshipping') %}
-								 <li><a href="#tab-contentshipping" data-toggle="tab">{{ tab_shipping}}</a></li>
-								{% endif %}
 
 								{% if product_tabtitle %}
 					           	 <li><a href="#tab-customhtml" data-toggle="tab">{{ product_tabtitle}}</a></li>

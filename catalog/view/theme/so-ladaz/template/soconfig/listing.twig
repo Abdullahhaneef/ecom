@@ -29,7 +29,7 @@
 				<a href="javascript:void(0)" class="open-sidebar {{class_btn_canvas}}"><i class="fa fa-bars"></i>{{ text_sidebar }}</a>
 				<div class="sidebar-overlay "></div>
 			{% endif %}
-			<div class="list-view">
+			<div class="list-view" style="display:none;">
 				<div class="btn btn-gridview">{{text_gridview}}</div>
 				<button type="button" id="grid-view-2" class="btn btn-view hidden-sm hidden-xs">2</button>
 			  	<button type="button" id="grid-view-3" class="btn btn-view hidden-sm hidden-xs ">3</button>
@@ -59,19 +59,19 @@
 				
 				</select>
 			</div>
-			<div class="form-group">
-				<label class="control-label" for="input-limit">{{ text_limit }}</label>
-				<select id="input-limit" class="form-control" onchange="location = this.value;">
+			<div class="form-group" style="display:none;">
+				<label class="control-label" for="input-limit">100</label>
+				<select id="input-limit" class="form-control" onchange="location = 100;">
 					{% for limits in limits %}
 					{% if limits.value == limit %}
-					<option value="{{ limits.href }}" selected="selected">{{ limits.text }}</option>
+					
+					<option value="{{ limits.href }}" selected="selected">100</option>
 					{% else %}
 					<option value="{{ limits.href }}">{{ limits.text }}</option>
 					{% endif %}
 					{% endfor %}
 				</select>
 			</div>
-			<div class="form-group product-compare hidden-sm hidden-xs"><a href="{{ compare }}" id="compare-total" class="btn btn-default">{{ text_compare }}</a></div>
 		</div>
 	
   </div>
@@ -236,6 +236,10 @@
 
 <script type="text/javascript"><!--
 reinitView();
+
+ $('.products-category .product-layout').attr('class', 'product-layout product-grid product-grid-3 col-lg-4 col-md-4 col-sm-6 col-xs-12');
+                localStorage.setItem('listview', 'grid-3');
+
 
 function reinitView() {
 

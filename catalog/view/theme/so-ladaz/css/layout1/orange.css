@@ -4266,8 +4266,7 @@ span.fa-stack {
     /* [6] */
     /* [6] */
     /* [7] */
-    font-size: 12px;
-    font-size: 1.2rem;
+    font-size: 25px;
     /* [8] */
     font-weight: normal; }
   .price .price-new, .price span.price {
@@ -4276,8 +4275,7 @@ span.fa-stack {
     /* [6] */
     /* [6] */
     /* [7] */
-    font-size: 16px;
-    font-size: 1.6rem;
+    font-size: 25px;
     /* [8] */
     font-weight: 700; }
 /*==================== COUNT DOWN BOX ====================*/
@@ -4753,7 +4751,7 @@ span.fa-stack {
     background-color: #fe5722;
     border-radius: 10px;
     border: none;
-    padding: 14px 36px;
+    padding: 14px 16px;
     line-height: 100%;
     margin-top: 5px;
     border: 1px solid #ebebeb; 
@@ -5314,7 +5312,7 @@ span.fa-stack {
   margin-bottom: 10px;
   margin-top: 10px; }
   .product_page_price .price-new {
-    font-size: 28px; }
+    font-size: 40px; }
   .product_page_price .price-old {
     vertical-align: top; }
   .product_page_price .price-tax {
@@ -5500,12 +5498,12 @@ span.fa-stack {
     /* [6] */
     /* [6] */
     /* [7] */
-    font-size: 22px;
-    font-size: 2.2rem;
+    font-size: 40px;
     /* [8] */
     text-transform: capitalize;
     color: #222;
-    font-weight: 500; }
+    font-weight: 500;
+    margin-bottom: 50px; }
   .product-view .content-product-right .box-review {
     /* [4] */
     /* [6] */
@@ -5673,21 +5671,21 @@ span.fa-stack {
     margin-right: 5px;
     z-index: 1; }
   .product-view .content-product-right .box-info-product .cart input {
+    margin-top: 55px;	
     background-color: #fe5722;
-    border-radius: 3px;
+    border-radius: 10px;
     border: none;
     color: #fff;
     /* [4] */
     /* [6] */
     /* [6] */
     /* [7] */
-    font-size: 12px;
-    font-size: 1.2rem;
+    font-size: 25px;
     /* [8] */
-    font-weight: 400;
+    font-weight: 600;
     line-height: 33px;
-    height: 33px;
-    padding: 0px 15px 0 30px;
+    height: 60px;
+    padding: 0px 100px;
     text-transform: uppercase;
     float: left;
     margin-right: 2px;
