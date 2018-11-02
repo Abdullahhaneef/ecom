@@ -1,9 +1,9 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'http://darazexpress.pk/');
+define('HTTP_SERVER', 'http://www.darazexpress.pk/');
 
 // HTTPS
-define('HTTPS_SERVER', 'http://darazexpress.pk/');
+define('HTTPS_SERVER', 'https://www.darazexpress.pk/');
 
 // DIR
 define('DIR_APPLICATION', '/var/www/html/darazexpress/catalog/');
