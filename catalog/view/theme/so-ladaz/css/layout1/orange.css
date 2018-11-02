@@ -4266,7 +4266,7 @@ span.fa-stack {
     /* [6] */
     /* [6] */
     /* [7] */
-    font-size: 25px;
+    font-size: 14px;
     /* [8] */
     font-weight: normal; }
   .price .price-new, .price span.price {
@@ -6420,14 +6420,23 @@ header.navbar-compact .header-middle {
   margin: 0; }
   header .icon-phone {
     width: 20px;
-    height: 20px;
+    height: 24px;
     float: left;
     margin-right: 10px;
-    fill: #e74c3c; }
+    fill: #92b411; }
+
+  header .fa-phone {
+    width: 20px;
+    height: 24px;
+    float: left;
+    margin-right: 10px;
+    fill: #92b411; }
+    
 /*============ HEADER  ==================*/
 .header-top {
   font-size: 12px;
-  border-bottom: 1px solid #ddd; }
+  border-bottom: 1px solid #ddd;
+  display: none; }
   .header-top .list-msg {
     margin-top: 6px;
     height: 24px;
@@ -6482,7 +6491,8 @@ header.navbar-compact .header-middle {
     padding: 3px 10px; }
 
 .header-middle {
-  padding: 39px 0 31px;
+  /*padding: 39px 0 31px;*/
+  padding: 28px 0;	
   background: #fff; }
 
 .common-home .header-bottom-inner {
@@ -6493,7 +6503,8 @@ header.navbar-compact .header-middle {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 /* SO Search Prod*/
 .phone-contact {
-  font-size: 12px; }
+  font-size: 18px; 
+  color: #92b411;}
   .phone-contact b {
     text-transform: uppercase;
     padding: 0 5px; }
@@ -6775,3 +6786,12 @@ footer {
 
 #main-content, #content {
   margin-bottom: 30px; }
+
+.width50  {
+
+    color: red;
+    background-color: #c1ff56;
+    width: 370px;
+
+}
+
