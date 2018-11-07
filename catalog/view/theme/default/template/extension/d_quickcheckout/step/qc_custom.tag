@@ -59,6 +59,10 @@
 
         this.on('mount', function(){
             this.store.initFieldSortable('custom');
+        $("#custom_agree").click();
+        $(".qc-checkbox").css("display","none")
+        $("#payment_address_shipping_address").click();
+        $("#payment_address_agree").click();
             
         })
     </script>
