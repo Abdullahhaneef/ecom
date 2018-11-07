@@ -1,12 +1,12 @@
 <qc_custom>
-<!--    <div class="step">
+    <div class="step">
 
         <qc_custom_setting if={riot.util.tags.selectTags().search('"qc_custom_setting"') && getState().edit} step="{opts.step}"></qc_custom_setting>
 
         <qc_pro_label if={ riot.util.tags.selectTags().search('"qc_custom_setting"') < 0 && getState().edit}></qc_pro_label>
--->
+
         <!-- Step -->
-<!--        <div class="panel panel-default" show={ getConfig().custom.display == 1 }>
+        <div class="panel panel-default" show={ getConfig().custom.display == 1 }>
              <div class="panel-heading">
                 <h4 class="panel-title">
                     <span class="icon">
@@ -38,9 +38,9 @@
                 <qc_custom_field if={getState().edit} setting_id="custom_custom_field_{rand()}" step="custom" location_account="true"></qc_custom_field>
             </div>
         </div>
--->
+
         <!-- Hidden Step -->
-<!--        <div show={(getConfig().custom.display != 1 && getState().edit)}>
+        <div show={(getConfig().custom.display != 1 && getState().edit)}>
             <div class="panel panel-default" style="opacity: 0.5">
                 <div class="panel-heading"> 
                     { getLanguage().custom.heading_title } 
@@ -49,7 +49,7 @@
             </div>
         </div>
     </div>
--->
+
     <script>
         this.mixin({store:d_quickcheckout_store});
 
