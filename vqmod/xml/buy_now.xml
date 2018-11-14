@@ -1,0 +1,47 @@
+<modification>
+    <id>buy_now</id>
+    <version>1.5.5.x</version>
+    <vqmver>1.0</vqmver>
+    <author>THEMERZ</author>
+    <file path="catalog/view/theme/*/template/product/product.twig">
+        <operation>
+            <search position="after"><![CDATA[<button type="button" id="button-cart" data-loading-text="{{ text_loading }}" class="btn btn-primary btn-lg btn-block">{{ button_cart }}</button>]]></search>
+            <add><![CDATA[<input type="button" value="Buy Now" id="buy-now" class="button btn btn-primary btn-lg btn-block" />]]></add>
+        </operation>
+		 <operation>
+            <search position="before"><![CDATA[{{ footer }}]]></search>
+            <add><![CDATA[<script>$(document).ready(function() {
+			$('#buy-now').bind('click', function() {
+	$.ajax({
+		url: 'index.php?route=checkout/cart/add',
+		type: 'post',
+		data: $('#product input[type=\'text\'], #product input[type=\'hidden\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select, #product textarea'),
+		dataType: 'json',
+		success: function(json) {
+			$('.success, .warning, .attention, information, .error').remove();
+			
+			if (json['error']) {
+				if (json['error']['option']) {
+					for (i in json['error']['option']) {
+						$('#option-' + i).after('<span class="error">' + json['error']['option'][i] + '</span>');
+					}
+				}
+			} 
+			
+			if (json['success']) {
+				$('#notification').html('<div class="success" style="display: none;">' + json['success'] + '<img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>');
+					
+				$('.success').fadeIn('slow');
+					
+				$('#cart-total').html(json['total']);
+				
+				$('html, body').animate({ scrollTop: 0 }, 'slow');
+				window.location.href = 'index.php?route=checkout/cart';
+			}	
+		}
+	});
+});
+});</script>]]></add>
+        </operation>	
+    </file>
+</modification>

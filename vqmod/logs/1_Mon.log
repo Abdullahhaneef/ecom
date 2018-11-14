@@ -1,0 +1,90 @@
+---------- Date: 2018-11-12 21:26:13 ~ IP : 45.116.233.44 ----------
+REQUEST URI : /index.php?route=product/product&product_id=94
+MOD DETAILS:
+   modFile   : /var/www/html/darazexpress/vqmod/xml/buy_now.xml
+   id        : buy_now
+   version   : 1.5.5.x
+   vqmver    : 1.0
+   author    : THEMERZ
+
+File Name    : catalog/view/theme/*/template/product/product.twig(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <button type="button" id="button-cart" data-loading-text="{{ text_loading }}" class="btn btn-primary btn-lg btn-block">{{ button_cart }}</button>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-11-12 21:31:48 ~ IP : 45.116.233.44 ----------
+REQUEST URI : /index.php?route=product/product&product_id=95
+MOD DETAILS:
+   modFile   : /var/www/html/darazexpress/vqmod/xml/buy_now.xml
+   id        : buy_now
+   version   : 1.5.5.x
+   vqmver    : 1.0
+   author    : THEMERZ
+
+File Name    : catalog/view/theme/*/template/product/product.twig(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <button type="button" id="button-cart" data-loading-text="{{ text_loading }}" class="btn btn-primary btn-lg btn-block">{{ button_cart }}</button>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-11-12 21:48:01 ~ IP : 45.116.233.44 ----------
+REQUEST URI : /index.php?route=product/product&product_id=95
+MOD DETAILS:
+   modFile   : /var/www/html/darazexpress/vqmod/xml/buy_now.xml
+   id        : buy_now
+   version   : 1.5.5.x
+   vqmver    : 1.0
+   author    : THEMERZ
+
+File Name    : catalog/view/theme/*/template/product/product.twig(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <button type="button" id="button-cart" data-loading-text="{{ text_loading }}" class="btn btn-primary btn-lg btn-block">{{ button_cart }}</button>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-11-12 21:49:06 ~ IP : 45.116.233.44 ----------
+REQUEST URI : /index.php?route=product/product&product_id=92
+MOD DETAILS:
+   modFile   : /var/www/html/darazexpress/vqmod/xml/buy_now.xml
+   id        : buy_now
+   version   : 1.5.5.x
+   vqmver    : 1.0
+   author    : THEMERZ
+
+File Name    : catalog/view/theme/*/template/product/product.twig(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <button type="button" id="button-cart" data-loading-text="{{ text_loading }}" class="btn btn-primary btn-lg btn-block">{{ button_cart }}</button>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-11-12 21:52:25 ~ IP : 45.116.233.44 ----------
+REQUEST URI : /index.php?route=product/product&path=59%20&product_id=67&limit=100
+MOD DETAILS:
+   modFile   : /var/www/html/darazexpress/vqmod/xml/buy_now.xml
+   id        : buy_now
+   version   : 1.5.5.x
+   vqmver    : 1.0
+   author    : THEMERZ
+
+File Name    : catalog/view/theme/*/template/product/product.twig(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <button type="button" id="button-cart" data-loading-text="{{ text_loading }}" class="btn btn-primary btn-lg btn-block">{{ button_cart }}</button>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-11-12 22:08:18 ~ IP : 45.116.233.44 ----------
+REQUEST URI : /index.php?route=product/product&product_id=72
+MOD DETAILS:
+   modFile   : /var/www/html/darazexpress/vqmod/xml/buy_now.xml
+   id        : buy_now
+   version   : 1.5.5.x
+   vqmver    : 1.0
+   author    : THEMERZ
+
+File Name    : catalog/view/theme/*/template/product/product.twig(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <button type="button" id="button-cart" data-loading-text="{{ text_loading }}" class="btn btn-primary btn-lg btn-block">{{ button_cart }}</button>
+
+----------------------------------------------------------------------
+
+
