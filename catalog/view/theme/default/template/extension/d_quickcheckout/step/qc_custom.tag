@@ -59,27 +59,47 @@
 
         this.on('mount', function(){
             this.store.initFieldSortable('custom');
-        $("#custom_agree").click();
-        $(".qc-checkbox").css("display","none");
-	$("#child4").css("display","none")
-        $("#payment_address_shipping_address").click();
-        $("#payment_address_agree").click();
-        $($(".qc-field")[0]).addClass("qc-clearboth");
-	$($(".qc-field")[0]).removeClass("qc-col");
-	$("#payment_address_lastname").val("abc");
-	$($(".qc-field")[1]).css("display", "none");
-        $($(".qc-field")[8]).css("display","none");
-        $($(".qc-field")[9]).css("display","none");
-        $($(".qc-field")[10]).css("display","none"); 
-        $($(".qc-field")[12]).css("display","none");
+        $( document ).ready(function() {
+
+        if($("#payment_address_shipping_address").attr("checked") != "checked"){
+                $("#payment_address_shipping_address").click();
+        }
+        if($("#payment_address_agree").attr("checked") != "checked"){
+                $("#payment_address_agree").click();
+        }
+        setTimeout(function(){
+        if($("#custom_agree").attr("checked") != "checked"){
+                $("#custom_agree").click();
+        }
+        }, 3000);
+       // setTimeout(function(){
+       // if($("#payment_address_postcode").val() == ""){
+       //         $("#payment_address_postcode").val(12345);
+       // }
+       // }, 3000);
+
+
+       // $($(".qc-field")[0]).addClass("qc-clearboth");
+       // $($(".qc-field")[0]).removeClass("qc-col");
+      //  $("#payment_address_lastname").val("abcdefg");
         $($(".qc-field")[13]).addClass("qc-clearboth");
         $($(".qc-field")[13]).removeClass("qc-col");
-        $("#payment_address_postcode").val(123456);
-        $($(".qc-field")[14]).css("display","none");
+       // $("#payment_address_postcode").val(12345);
         $($($(".dropdown-menu")[5]).find("a")[171]).click();
-	$($($(".dropdown-menu")[6]).find("a")[6]).click(); 
-	$($(".qc-field")[15]).css("display","none");
-	$($(".qc-field")[16]).css("display","none");  
+        $($($(".dropdown-menu")[6]).find("a")[6]).click();
+        //$($(".qc-field")[1]).css("display", "none");
+        $($(".qc-field")[8]).css("display","none");
+        $($(".qc-field")[9]).css("display","none");
+        $($(".qc-field")[10]).css("display","none");
+        $($(".qc-field")[12]).css("display","none");
+      //  $($(".qc-field")[14]).css("display","none");
+        $($(".qc-field")[15]).css("display","none");
+        $($(".qc-field")[16]).css("display","none");
+        $(".qc-checkbox").css("display","none");
+        $("#child4").css("display","none");
+
+	})
+
         })
     </script>
 </qc_custom>

@@ -12,13 +12,13 @@ class ControllerCheckoutShippingAddress extends Controller {
 		$this->load->model('account/address');
 
 		$data['addresses'] = $this->model_account_address->getAddresses();
-
+/*
 		if (isset($this->session->data['shipping_address']['postcode'])) {
 			$data['postcode'] = $this->session->data['shipping_address']['postcode'];
 		} else {
 			$data['postcode'] = '';
 		}
-
+ */
 		if (isset($this->session->data['shipping_address']['country_id'])) {
 			$data['country_id'] = $this->session->data['shipping_address']['country_id'];
 		} else {
@@ -132,11 +132,11 @@ class ControllerCheckoutShippingAddress extends Controller {
 				$this->load->model('localisation/country');
 
 				$country_info = $this->model_localisation_country->getCountry($this->request->post['country_id']);
-
+/*
 				if ($country_info && $country_info['postcode_required'] && (utf8_strlen(trim($this->request->post['postcode'])) < 2 || utf8_strlen(trim($this->request->post['postcode'])) > 10)) {
 					$json['error']['postcode'] = $this->language->get('error_postcode');
 				}
-
+ */
 				if ($this->request->post['country_id'] == '') {
 					$json['error']['country'] = $this->language->get('error_country');
 				}

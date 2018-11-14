@@ -1,11 +1,11 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'http://darazexpress.pk/admin/');
-define('HTTP_CATALOG', 'http://darazexpress.pk/');
+define('HTTP_SERVER', 'http://www.darazexpress.pk/admin/');
+define('HTTP_CATALOG', 'http://www.darazexpress.pk/');
 
 // HTTPS
-define('HTTPS_SERVER', 'http://darazexpress.pk/admin/');
-define('HTTPS_CATALOG', 'http://darazexpress.pk/');
+define('HTTPS_SERVER', 'http://www.darazexpress.pk/admin/');
+define('HTTPS_CATALOG', 'http://www.darazexpress.pk/');
 
 // DIR
 define('DIR_APPLICATION', '/var/www/html/darazexpress/admin/');
