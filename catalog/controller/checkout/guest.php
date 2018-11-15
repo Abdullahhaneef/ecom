@@ -64,15 +64,15 @@ class ControllerCheckoutGuest extends Controller {
 		} else {
 			$data['address_2'] = '';
 		}
-/*
-		if (isset($this->session->data['payment_address']['postcode'])) {
-			$data['postcode'] = $this->session->data['payment_address']['postcode'];
-		} elseif (isset($this->session->data['shipping_address']['postcode'])) {
-			$data['postcode'] = $this->session->data['shipping_address']['postcode'];
-		} else {
-			$data['postcode'] = '';
-		}
- */
+
+//		if (isset($this->session->data['payment_address']['postcode'])) {
+//			$data['postcode'] = $this->session->data['payment_address']['postcode'];
+//		} elseif (isset($this->session->data['shipping_address']['postcode'])) {
+//			$data['postcode'] = $this->session->data['shipping_address']['postcode'];
+//		} else {
+//			$data['postcode'] = '';
+//		}
+
 		if (isset($this->session->data['payment_address']['city'])) {
 			$data['city'] = $this->session->data['payment_address']['city'];
 		} else {
@@ -189,11 +189,11 @@ class ControllerCheckoutGuest extends Controller {
 			$this->load->model('localisation/country');
 
 			$country_info = $this->model_localisation_country->getCountry($this->request->post['country_id']);
-/*
-			if ($country_info && $country_info['postcode_required'] && (utf8_strlen(trim($this->request->post['postcode'])) < 2 || utf8_strlen(trim($this->request->post['postcode'])) > 10)) {
-				$json['error']['postcode'] = $this->language->get('error_postcode');
-			}
- */
+
+//			if ($country_info && $country_info['postcode_required'] && (utf8_strlen(trim($this->request->post['postcode'])) < 2 || utf8_strlen(trim($this->request->post['postcode'])) > 10)) {
+//				$json['error']['postcode'] = $this->language->get('error_postcode');
+//			}
+ 
 			if ($this->request->post['country_id'] == '') {
 				$json['error']['country'] = $this->language->get('error_country');
 			}
@@ -252,7 +252,7 @@ class ControllerCheckoutGuest extends Controller {
 			$this->session->data['payment_address']['company'] = $this->request->post['company'];
 			$this->session->data['payment_address']['address_1'] = $this->request->post['address_1'];
 			$this->session->data['payment_address']['address_2'] = $this->request->post['address_2'];
-			/*	$this->session->data['payment_address']['postcode'] = $this->request->post['postcode']; */
+			//$this->session->data['payment_address']['postcode'] = $this->request->post['postcode']; 
 			$this->session->data['payment_address']['city'] = $this->request->post['city'];
 			$this->session->data['payment_address']['country_id'] = $this->request->post['country_id'];
 			$this->session->data['payment_address']['zone_id'] = $this->request->post['zone_id'];
@@ -303,7 +303,7 @@ class ControllerCheckoutGuest extends Controller {
 				$this->session->data['shipping_address']['company'] = $this->request->post['company'];
 				$this->session->data['shipping_address']['address_1'] = $this->request->post['address_1'];
 				$this->session->data['shipping_address']['address_2'] = $this->request->post['address_2'];
-			/*		$this->session->data['shipping_address']['postcode'] = $this->request->post['postcode']; */
+			//	$this->session->data['shipping_address']['postcode'] = $this->request->post['postcode']; 
 				$this->session->data['shipping_address']['city'] = $this->request->post['city'];
 				$this->session->data['shipping_address']['country_id'] = $this->request->post['country_id'];
 				$this->session->data['shipping_address']['zone_id'] = $this->request->post['zone_id'];

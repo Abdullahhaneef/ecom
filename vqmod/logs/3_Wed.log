@@ -43,3 +43,33 @@ VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <button type="button" i
 ----------------------------------------------------------------------
 
 
+---------- Date: 2018-11-14 20:00:34 ~ IP : 66.249.70.7 ----------
+REQUEST URI : /index.php?route=product/product&path=61_67%20&product_id=75&sort=pd.name&order=DESC&limit=100
+MOD DETAILS:
+   modFile   : /var/www/html/darazexpress/vqmod/xml/buy_now.xml
+   id        : buy_now
+   version   : 1.5.5.x
+   vqmver    : 1.0
+   author    : THEMERZ
+
+File Name    : catalog/view/theme/*/template/product/product.twig(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <button type="button" id="button-cart" data-loading-text="{{ text_loading }}" class="btn btn-primary btn-lg btn-block">{{ button_cart }}</button>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2018-11-14 20:05:22 ~ IP : 66.249.70.7 ----------
+REQUEST URI : /index.php?route=product/product&path=59%20&product_id=57&sort=rating&order=DESC&limit=100
+MOD DETAILS:
+   modFile   : /var/www/html/darazexpress/vqmod/xml/buy_now.xml
+   id        : buy_now
+   version   : 1.5.5.x
+   vqmver    : 1.0
+   author    : THEMERZ
+
+File Name    : catalog/view/theme/*/template/product/product.twig(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <button type="button" id="button-cart" data-loading-text="{{ text_loading }}" class="btn btn-primary btn-lg btn-block">{{ button_cart }}</button>
+
+----------------------------------------------------------------------
+
+
