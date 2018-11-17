@@ -135,6 +135,7 @@ var cart = {
 				}
 
 				if (json['success']) {
+					console.log("hello");
 					$('#wrapper').before('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + ' <button type="button" class="fa fa-close close" data-dismiss="alert"></button></div>');
 					$('#cart  .total-shopping-cart ').html(json['total'] );
 					$('#cart > ul').load('index.php?route=common/cart/info ul li');
