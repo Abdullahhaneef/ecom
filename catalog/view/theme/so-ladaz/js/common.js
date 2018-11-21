@@ -70,7 +70,7 @@ $(document).ready(function() {
 	});
 
 	// Menu
-	$('#menu .dropdown-menu').each(function() {
+/*	$('#menu .dropdown-menu').each(function() {
 		var menu = $('#menu').offset();
 		var dropdown = $(this).parent().offset();
 
@@ -80,6 +80,62 @@ $(document).ready(function() {
 			$(this).css('margin-left', '-' + (i + 5) + 'px');
 		}
 	});
+*/
+
+
+	// Menu
+	$('#menu .dropdown-menu, #menu .menu3rdlevel').each(function() {
+		$(this).css('display', 'block');	
+	});
+	$('#menu .dropdown-menu, #menu .menu3rdlevel').each(function() {
+		var menu = $('#menu').offset();
+		var dropdown = $(this).offset();
+
+		var i = (dropdown.left + $(this).outerWidth()) - (menu.left + $('#menu').outerWidth());
+
+		if (i > 0) {
+			$(this).css('margin-left', '-' + (i + 5) + 'px');
+			// menu3rdlevel change (move down if too big)>>
+			if($(this).parent().children('a')[0].className == 'arrow'){
+				$(this).css('top', $(this).parent().height() - 1 + 'px');
+			}
+		}
+	});
+	$('#menu .dropdown-menu, #menu .menu3rdlevel').each(function() {
+		$(this).css('display', '');	
+	});
+	
+	// Menu for mobile (part --> css)
+	$('#menu .arrow').click(function(event) {
+		
+		$3rdlevel = $(this).next('.menu3rdlevel');
+		if ($3rdlevel.hasClass('show3rdlevel')){
+			$3rdlevel.removeClass('show3rdlevel');
+			$3rdlevel.stop(false, true).slideUp('fast', function() {
+				
+				$3rdlevel.css('display', '');
+			});
+		}
+		else{
+			$3rdlevel.addClass('show3rdlevel');
+			$3rdlevel.stop(false, true).slideDown('fast', function() {
+				
+			});
+		}
+		
+/*		prev version
+		$(this).next('.menu3rdlevel').stop(false, true).slideToggle('fast', 'swing', function(){
+			
+		}); // toggle menu3rdlevel
+*/
+		event.preventDefault();
+		event.stopPropagation();
+	});
+	
+	$('#menu .arrow').dblclick(function() { // go to link on double click
+		window.location.href = $(this).attr('href');
+	});
+        
 
 	// Checkout
 	$(document).on('keydown', '#collapse-checkout-option input[name=\'email\'], #collapse-checkout-option input[name=\'password\']', function(e) {

@@ -27,6 +27,7 @@
 {{soconfig.addCss('catalog/view/javascript/soconfig/css/lib.css')}}
 {{soconfig.addCss('catalog/view/theme/'~theme_directory~'/css/ie9-and-up.css')}}
 {{soconfig.addCss('catalog/view/theme/'~theme_directory~'/css/custom.css')}}
+{{soconfig.addCss('catalog/view/theme/default/stylesheet/menu3rdlevel/menu3rdlevel.css')}}
 
 {% for style in styles %}{{ soconfig.addCss(style.href)}}{% endfor %}
 {% if soconfig.get_settings('cssfile_status') %}{% for cssfile in soconfig.get_settings('cssfile_url') %} {{soconfig.addCss(cssfile)}} {% endfor %} {% endif %}
