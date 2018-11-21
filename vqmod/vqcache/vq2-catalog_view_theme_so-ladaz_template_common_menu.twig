@@ -1,0 +1,55 @@
+{% if categories %}
+
+  <nav id="menu" class="navbar">
+    <div class="navbar-header"><span id="category" class="visible-xs">{{ text_category }}</span>
+      <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
+    </div>
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+        {% for category in categories %}
+        {% if category.children %}
+        <li class="dropdown"><a href="{{ category.href }}" class="dropdown-toggle" data-toggle="dropdown">{{ category.name }}</a>
+          <div class="dropdown-menu">
+            <div class="dropdown-inner"> {% for children in category.children|batch(category.children|length / category.column|round(1, 'ceil')) %}
+              <ul class="list-unstyled">
+                {% for child in children %}
+                
+		        	{% if child.children_lv3  %}
+                		<li><a class="arrow" href="{{ child.href }}">{{ child.name }}</a>
+                        	<div class="menu3rdlevel">
+            					<div class="menu3rdlevel_inner">
+              						{% for children_lv3 in child.children_lv3|batch(child.children_lv3|length / child.column|round(1, 'ceil')) %}
+              							<ul class="list-unstyled">
+                							{% for child_lv3 in children_lv3 %}
+                                            	<li><a href="{{ child_lv3.href }}">{{ child_lv3.name }}</a></li>
+                                            {% endfor %}
+                                       	</ul>
+                                 	{% endfor %}
+                           		</div>
+                                <a href="{{ child.href }}" class="see-all">{{ text_all }} {{ child.name }}</a>
+                           	</div>
+                        </li>
+                   	{% else %}
+                    	<li><a href="{{ child.href }}">{{ child.name }}</a></li>
+                  	{% endif %}
+      
+                {% endfor %}
+              </ul>
+              {% endfor %}</div>
+            <a href="{{ category.href }}+&limit=100" class="see-all">{{ text_all }} {{ category.name }}</a> </div>
+        </li>
+        {% else %}
+        <li><a href="{{ category.href }}+&limit=100">{{ category.name }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </nav>
+
+{% endif %}
+
+<script>
+	var par = $(".navbar-nav").find("li")[0];
+	$($(par).children()[0]).prepend('<span> <img  style = "height:32px" src = "https://4.bp.blogspot.com/-2gpq7g9XlvQ/UOZb4eoi0WI/AAAAAAAADDE/bK-YIjiaJU0/s1600/blinkingNEWgif2.gif"></img> </span>');
+</script>
+
