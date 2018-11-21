@@ -3215,7 +3215,7 @@ img {
   margin: 0 auto; }
 
 .text-danger {
-  color: #fff;
+  color: #fff !important;
   display: inline-block;
   background-color: #a94442;
   padding: 0 5px;
@@ -6674,7 +6674,7 @@ header.navbar-compact .header-middle {
       float: none; }
       #menu .navbar-collapse .navbar-nav > li > a {
         border-radius: 3px;
-        color: #737373;
+        color: #fe5722;
         font-size: 17px;
         height: auto;
         padding: 0px 15px;
@@ -6795,3 +6795,31 @@ footer {
 
 }
 
+#payment_address_form .text{
+    font-size: 16px;
+    color: red;
+    font-weight: bold;
+}
+
+#qc_confirm_order{
+    background: red !important;
+    font-weight: bold !important;
+    font-size: 24px !important;
+}
+
+#qc_confirm_order:hover{
+    background: green !important;
+}
+
+.pull-right .btn-primary{
+    font-size: 22px;
+    font-weight: bold;
+    background: green !important;
+    border-radius: 10px !important;
+}
+
+.pull-left .btn-default{
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 10px !important;
+}

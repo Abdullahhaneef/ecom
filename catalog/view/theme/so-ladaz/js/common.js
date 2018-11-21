@@ -136,12 +136,16 @@ var cart = {
 
 				if (json['success']) {
 					console.log("hello");
+
+				        console.log("hello world");
+					$('.modal-body').find('h1').append(json['success']);
+				        $('#shopPopup').modal('show');
 					$('#wrapper').before('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + ' <button type="button" class="fa fa-close close" data-dismiss="alert"></button></div>');
 					$('#cart  .total-shopping-cart ').html(json['total'] );
 					$('#cart > ul').load('index.php?route=common/cart/info ul li');
 					timer = setTimeout(function () {
 						$('.alert').addClass('fadeOut');
-					}, 4000);
+					}, 1000);
 				}
 			},
 			error: function(xhr, ajaxOptions, thrownError) {

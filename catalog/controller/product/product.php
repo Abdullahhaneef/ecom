@@ -421,7 +421,11 @@ class ControllerProductProduct extends Controller {
 					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
 				);
 			}
-
+        $this->load->language('extension/module/shoppingpopup');
+        $data['text_continue_shopping'] = $this->language->get("text_continue_shopping");
+        $data['text_checkoutcart'] = $this->language->get("text_checkoutcart");
+        $data['checkoutcart'] = $this->url->link("checkout/cart",'','SSL');
+        $data['text_shopppopup'] = $this->language->get("text_shopppopup");
 			$data['tags'] = array();
 
 			if ($product_info['tag']) {

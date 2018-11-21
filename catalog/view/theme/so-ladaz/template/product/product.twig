@@ -655,6 +655,10 @@ $('#button-cart').on('click', function() {
 			}
 			
 			if (json['success']) {
+				console.log("hello world");
+				$('.modal-body').find('h1').append(json['success']);
+		                $('#shopPopup').modal('show'); 
+
 				$('.text-danger').remove();
 				$('#wrapper').before('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + ' <button type="button" class="fa fa-close close" data-dismiss="alert"></button></div>');
 				$('#cart  .total-shopping-cart ').html(json['total'] );
@@ -662,7 +666,7 @@ $('#button-cart').on('click', function() {
 				
 				timer = setTimeout(function () {
 					$('.alert').addClass('fadeOut');
-				}, 4000);
+				}, 1000);
 				$('.so-groups-sticky .popup-mycart .popup-content').load('index.php?route=extension/module/so_tools/info .popup-content .cart-header');
 			}
 			
@@ -866,5 +870,31 @@ $('.product-detail input[type=\'text\'], .product-detail input[type=\'hidden\'],
 	ajax_price();
 });
 </script>
+
+<div id="shopPopup" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">{{ text_shopppopup }}</h4>
+      </div>
+      <div class="modal-body">
+
+         <div id="content" class="{{ class }}">{{ content_top }}
+    	     <h1></h1>
+   	 </div>
+
+      </div>
+      <div class="modal-footer">
+      <div class="buttons clearfix">
+        <div class="pull-left"><a href="index.php?route=product/category&path=59+&limit=100" class="btn btn-default">{{ button_shopping }}</a></div>
+        <div class="pull-right"><a href="index.php?route=checkout/checkout" class="btn btn-primary">BUY NOW</a></div>
+      </div>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 {{ footer }} 

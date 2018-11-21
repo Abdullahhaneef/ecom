@@ -323,4 +323,32 @@ function reinitView() {
 
 }
 
-//--></script> 
+//--></script>
+
+
+<div id="shopPopup" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">{{ text_shopppopup }}</h4>
+      </div>
+      <div class="modal-body">
+
+         <div id="content1" class="{{ class }}">{{ content_top }}
+             <h1></h1>
+         </div>
+
+      </div>
+      <div class="modal-footer">
+      <div class="buttons clearfix">
+        <div class="pull-left"><a href="index.php?route=product/category&path=59+&limit=100" class="btn btn-default">{{ button_shopping }}</a></div>
+        <div class="pull-right"><a href="index.php?route=checkout/checkout" class="btn btn-primary">BUY NOW</a></div>
+      </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+ 

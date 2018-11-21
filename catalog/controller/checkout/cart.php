@@ -317,6 +317,17 @@ class ControllerCheckoutCart extends Controller {
 
 			if (!$json) {
 				$this->cart->add($this->request->post['product_id'], $quantity, $option, $recurring_id);
+				        $this->load->language('extension/module/shoppingpopup');
+        $this->load->model('tool/image');
+
+        $json['productname'] = $product_info['name'];
+        $json['productqty'] = $quantity;
+
+        if ($product_info['image']) {
+          $json['productimage'] = $this->model_tool_image->resize($product_info['image'], $this->language->get("text_shopping_popupsize"), $this->language->get("text_shopping_popupsize"));
+        } else {
+          $json['productimage'] = '';
+        }
 
 				$json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('checkout/cart'));
 
