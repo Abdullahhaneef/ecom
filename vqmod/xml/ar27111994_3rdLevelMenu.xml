@@ -58,22 +58,22 @@
       		<search position="replace"><![CDATA[<li><a href="{{ child.href }}+&limit=100">{{ child.name }}</a></li>]]></search>
       		<add><![CDATA[
 		        	{% if child.children_lv3  %}
-                		<li><a class="arrow" href="{{ child.href }}">{{ child.name }}</a>
+                		<li><a class="arrow" href="{{ child.href }}+&limit=100">{{ child.name }}</a>
                         	<div class="menu3rdlevel">
             					<div class="menu3rdlevel_inner">
               						{% for children_lv3 in child.children_lv3|batch(child.children_lv3|length / child.column|round(1, 'ceil')) %}
               							<ul class="list-unstyled">
                 							{% for child_lv3 in children_lv3 %}
-                                            	<li><a href="{{ child_lv3.href }}">{{ child_lv3.name }}</a></li>
+                                            	<li><a href="{{ child_lv3.href }}+&limit=100">{{ child_lv3.name }}</a></li>
                                             {% endfor %}
                                        	</ul>
                                  	{% endfor %}
                            		</div>
-                                <a href="{{ child.href }}" class="see-all">{{ text_all }} {{ child.name }}</a>
+                                <a href="{{ child.href }}+&limit=100" class="see-all">{{ text_all }} {{ child.name }}</a>
                            	</div>
                         </li>
                    	{% else %}
-                    	<li><a href="{{ child.href }}">{{ child.name }}</a></li>
+                    	<li><a href="{{ child.href }}+&limit=100">{{ child.name }}</a></li>
                   	{% endif %}
       ]]></add>
     	</operation>

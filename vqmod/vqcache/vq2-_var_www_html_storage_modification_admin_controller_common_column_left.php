@@ -1,6 +1,26 @@
 <?php
 class ControllerCommonColumnLeft extends Controller {
 	public function index() {
+
+        $token = (isset($this->session->data['user_token']))
+          ? $this->session->data['user_token']
+          : $this->session->data['token'];
+        $tokenString = 'token=' . $token . '&user_token=' . $token;
+        $facebookAdsExtension = array();
+        $facebookAdsExtension[] = array(
+          'name'     => 'Facebook Ads Extension',
+          'href'     => $this->url->link('extension/facebookadsextension', $tokenString, true),
+          'children' => array()
+        );
+
+        $data['menus'][] = array(
+          'id'       => 'menu-facebook-ads-extension',
+          'icon'     => 'fa-facebook-square',
+          'name'     => 'Facebook Ads Extension',
+          'href'     => '',
+          'children' => $facebookAdsExtension
+        );
+      
 		if (isset($this->request->get['user_token']) && isset($this->session->data['user_token']) && ($this->request->get['user_token'] == $this->session->data['user_token'])) {
 			$this->load->language('common/column_left');
 
