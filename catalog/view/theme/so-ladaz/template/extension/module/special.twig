@@ -104,9 +104,6 @@
                             </div>
 
                             <button class="addToCart btn-button" type="button" title="{{ button_cart}}" onclick="cart.add('{{ product.product_id }}', '1');"><i class="fa fa-shopping-basket"></i><span>{{ button_cart }}</span></button>
-                            {% if soconfig.get_settings('quick_status') %}
-                                <a class="quickview iframe-link visible-lg btn-button" title="{{ objlang.get('text_quickview')}}" data-fancybox-type="iframe"  href="{{ our_url.link('extension/soconfig/quickview','product_id='~product.product_id) }}"> <i class="fa fa-eye"></i> </a>
-                            {% endif %}
 
                             {% endif %} 
                            
@@ -134,7 +131,7 @@
       </div>
       <div class="modal-footer">
       <div class="buttons clearfix">
-        <div class="pull-left"><a href="index.php?route=product/category&path=59+&limit=100" class="btn btn-default">{{ button_shopping }}</a></div>
+        <div class="pull-left"><a data-dismiss="modal" class="btn btn-default">{{ button_shopping }}</a></div>
         <div class="pull-right"><a href="index.php?route=checkout/checkout" class="btn btn-primary">BUY NOW</a></div>
       </div>
       </div>

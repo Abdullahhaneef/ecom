@@ -656,6 +656,7 @@ $('#button-cart').on('click', function() {
 			
 			if (json['success']) {
 				console.log("hello world");
+				$('.modal-body').find('h1')[0].innerText= "";
 				$('.modal-body').find('h1').append(json['success']);
 		                $('#shopPopup').modal('show'); 
 
@@ -869,6 +870,9 @@ var change_price = function(id, new_price) {$(id).html(new_price);}
 $('.product-detail input[type=\'text\'], .product-detail input[type=\'hidden\'], .product-detail input[type=\'radio\'], .product-detail input[type=\'checkbox\'], .product-detail select, .product-detail textarea, .product-detail input[name=\'quantity\']').on('change', function() {
 	ajax_price();
 });
+$(document).ready(function(){
+	$("#input-option279").attr('placeholder','e.g: Marium, Ali, Wife, Hubby ETC');
+})
 </script>
 
 <div id="shopPopup" class="modal fade" role="dialog">
@@ -888,7 +892,7 @@ $('.product-detail input[type=\'text\'], .product-detail input[type=\'hidden\'],
       </div>
       <div class="modal-footer">
       <div class="buttons clearfix">
-        <div class="pull-left"><a href="index.php?route=product/category&path=59+&limit=100" class="btn btn-default">{{ button_shopping }}</a></div>
+        <div class="pull-left"><a data-dismiss="modal" class="btn btn-default">{{ button_shopping }}</a></div>
         <div class="pull-right"><a href="index.php?route=checkout/checkout" class="btn btn-primary">BUY NOW</a></div>
       </div>
       </div>

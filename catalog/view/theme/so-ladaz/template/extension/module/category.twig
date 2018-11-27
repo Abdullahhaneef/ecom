@@ -6,9 +6,9 @@
       {% for i,category in categories %} 
 		<li class="panel">
 			{% if category.category_id == category_id %} 
-				<a href="{{ category.href }} " class="active">{{ category.name }} </a>
+				<a href="{{ category.href }}&limit=100 " class="active">{{ category.name }} </a>
 			{% else %}   
-				<a href="{{ category.href }} ">{{ category.name }} </a>
+				<a href="{{ category.href }}&limit=100 ">{{ category.name }} </a>
 			{% endif %} 
 						
 			{% if category.children %} 
@@ -18,9 +18,9 @@
 					   {% for child in category.children %} 
 						<li>
 							{% if child.category_id  ==  child_id %} 
-								<a href="{{ child.href }} " class="active">{{ child.name }} </a>
+								<a href="{{ child.href }}&limit=100 " class="active">{{ child.name }} </a>
 							{% else %}   
-								<a href="{{ child.href }} ">{{ child.name }} </a>
+								<a href="{{ child.href }}&limit=100 ">{{ child.name }} </a>
 							{% endif %} 
 						</li>
 					   {% endfor %}

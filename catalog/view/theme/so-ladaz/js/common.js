@@ -132,7 +132,7 @@ $(document).ready(function() {
 		event.stopPropagation();
 	});
 	
-	$('#menu .arrow').dblclick(function() { // go to link on double click
+	$('#menu .arrow').click(function() { // go to link on double click
 		window.location.href = $(this).attr('href');
 	});
         
@@ -194,6 +194,7 @@ var cart = {
 					console.log("hello");
 
 				        console.log("hello world");
+					$('.modal-body').find('h1')[0].innerText= "";
 					$('.modal-body').find('h1').append(json['success']);
 				        $('#shopPopup').modal('show');
 					$('#wrapper').before('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + ' <button type="button" class="fa fa-close close" data-dismiss="alert"></button></div>');

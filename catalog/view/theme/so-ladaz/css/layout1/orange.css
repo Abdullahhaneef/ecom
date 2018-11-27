@@ -4748,14 +4748,13 @@ span.fa-stack {
     font-weight: 600;
     color: #000;
     text-transform: uppercase;
-    background-color: #fe5722;
+    background-color: #fb641b;
     border-radius: 10px;
     border: none;
     padding: 14px 16px;
     line-height: 100%;
     margin-top: 5px;
     border: 1px solid #ebebeb; 
-    float: left;
     margin-bottom: 20px;}
   .products-list .product-grid .product-item-container .right-block .quickview {
     float: right;
@@ -5551,7 +5550,8 @@ span.fa-stack {
     width: 100%;
     padding: 10px 0px;
     color: #666;
-    position: relative; }
+    position: relative; 
+    display: none;}
   .product-view .content-product-right .product-box-desc span {
     display: inline-block;
     min-width: 120px; }
@@ -5607,7 +5607,8 @@ span.fa-stack {
   .product-view .content-product-right h3 {
     font-size: 14px;
     text-transform: uppercase;
-    font-weight: 600; }
+    font-weight: 600; 
+    display: none;}
   .product-view .content-product-right .box-info-product {
     float: left;
     width: 100%;
@@ -5755,7 +5756,8 @@ span.fa-stack {
   #product .control-label {
     font-weight: 600;
     margin-bottom: 5px;
-    font-size: 14px; }
+    font-size: 18px;
+    color: red; }
   #product .product-options .img-thumbnail {
     width: 22px;
     height: 22px;
@@ -5779,7 +5781,8 @@ span.fa-stack {
     padding: 5px 10px; }
   #product .radio-type-button .option-content-box.active, #product .radio-type-button .option-content-box.active:hover {
     background: #666;
-    color: white; }
+    color: red;
+    border: 4px solid; }
   #product .radio-type-button .option-content-box:hover {
     background: #dadada; }
   #product .radio-type-button.option_image .option-name {
